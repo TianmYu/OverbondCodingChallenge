@@ -40,14 +40,16 @@ The government bonds are also sorted by term length. This allows for quick searc
 Basic checks were employed in functions to check that proper inputs are provided, and would terminate the function with an error message if some improper inputs were received
 
 ## Trade-Offs and Possible Future Developments
-One possibility for future development is regarding the initial data storage after it is read from the CSV. Currently, the entire CSV is read and stored in memory. While it is perfectly possible to store millions of data points in the program memory, it could be more effective at larger scales to perform a line by line reading, or have a separate program that reads the CSV and provides a data stream.
+#### Data Storage
+* One possibility for future development is regarding the initial data storage after it is read from the CSV. Currently, the entire CSV is read and stored in memory. While it is perfectly possible to store millions of data points in the program memory, it could be more effective at larger scales to perform a line by line reading, or have a separate program that reads the CSV and provides a data stream.
 * Switching to the use of a data stream could also allow the program to work in a real time pipeline with other software that records or preprocesses the data, rather than having to be rerun on each new CSV.
 
-Another future development could be the integration with a visualization tool or front end. 
-* For example, pyPlot could be used the visualize the data, and even potentially to debug the program
+#### Visualization or Frontend
+* A visualization tool could be useful to create an easily understandible representation of the data. For exmaple, a library like pyPlot can be used.
 * Alternatively, this outlines a trade-off that was chosen, which is the development of the program in python. If JavaScript was used, the code could easily be integrated with CSS/HTML styling. While python integration is still possible, it would not be as straightforward
 
-A final future development would be the investment into more extensive automated tests. The current submission's testing program only considers a small handfull of hand calculated cases to test for.
+#### Testing
+* A final future development would be the investment into more extensive automated tests. The current submission's testing program only considers a small handfull of hand calculated cases to test for.
 * This could include the creation of a test sample generator that could produce inputs and expected outputs, on which the program can be tested.
 
 ## Function Documentation
